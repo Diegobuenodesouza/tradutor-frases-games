@@ -1,0 +1,10 @@
+.jumbotron{
+    margin-top: 20px;
+    padding: 15px 15px}
+
+.bordas{
+    border: solid red 1px;
+    border-radius: 25%;
+    text-align: center;
+    
+}

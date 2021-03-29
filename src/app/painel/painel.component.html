@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">        
+            <div class="col-sm-6">
+                <app-progresso [progresso]="progresso"></app-progresso>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-flex justify-content-center">
+                    <p><b>Rodada:</b> 0{{rodada +1 }}/04</p>                    
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-flex justify-content-end">
+                    <app-tentativas [tentativas]="tentativas"></app-tentativas>  
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6>{{instrucao}}</h6>
+                <p>{{rodadaFrase.fraseEng}}</p>
+                <p *ngIf="dica" style="color: brown"><b>Dica</b> : {{dicas[rodada]}} </p>          
+                <div class="form-group">                
+                    <textarea class="form-control" rows="3" placeholder="Digite a tradução"
+                    (blur)="atualizarResposta($event)" [value]="resposta"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="d-flex justify-content-start">
+                    <button type="button" class="btn btn-danger" (click)="mostrarDica()" [disabled]="dica || tentativas === 0">Dica</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" (click)="verificarResposta()">Verificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

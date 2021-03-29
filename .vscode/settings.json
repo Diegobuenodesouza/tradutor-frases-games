@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/84cbe318-20d3-42ed-bf29-63fafe50e15f/resourceGroups/traduzir-frases/providers/Microsoft.Web/sites/traduzir-frases",
+    "appService.deploySubpath": "dist\\app1"
+}
